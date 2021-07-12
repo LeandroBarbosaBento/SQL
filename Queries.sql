@@ -1,4 +1,3 @@
-
 -- SELECT * FROM socios
 
 -- SELECT id_socio, nome, telefone FROM socios
@@ -107,6 +106,53 @@
 -- SELECT * FROM socios WHERE id_socio NOT IN (10,20,30)
 
 -- SELECT * FROM socios WHERE cidade NOT IN ('Lisboa', 'Porto')
+
+-- SELECT MAX(data_nascimento) FROM socios
+
+-- SELECT MAX(data_nascimento) FROM socios WHERE id_socio <= 50
+
+-- SELECT MAX(quantia) FROM donativos
+
+-- SELECT MIN(quantia), MAX(quantia) FROM donativos
+
+-- SELECT MIN(quantia) AS minimo, MAX(quantia) AS maximo FROM donativos
+
+-- SELECT MIN(data_nascimento), MAX(data_nascimento) FROM socios
+
+-- SELECT MIN(data_nascimento) AS 'mais_velho', MAX(data_nascimento) AS 'mais_novo' FROM socios
+
+-- SELECT socios.nome, socios.morada, socios.cidade FROM socios
+-- SELECT s.nome, s.morada, s.cidade FROM socios s
+	-- muito utilizado quando temos que relacionar 2 ou mais tabelas
+	
+-- SELECT COUNT(id_socio) AS total FROM socios
+
+-- SELECT COUNT(id_socio) AS total FROM socios WHERE data_nascimento < '1980-01-01'
+
+-- SELECT * FROM donativos WHERE quantia = 20
+
+-- SELECT COUNT(id_donativo) AS total FROM donativos WHERE quantia = 20
+
+-- SELECT AVG(quantia) FROM donativos
+
+-- SELECT AVG(quantia) FROM donativos WHERE data_hora <= '2015-01-01'
+
+-- SELECT SUM(quantia) FROM donativos
+-- SELECT SUM(quantia) AS total FROM donativos
+
+-- SELECT SUM(quantia) AS total FROM donativos WHERE data_hora >= '2017-01-01'
+
+--
+
+
+
+
+
+
+
+
+
+
 
 
 
