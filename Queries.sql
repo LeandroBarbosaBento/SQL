@@ -214,6 +214,43 @@ ORDER BY total DESC
 /***** TRUNCATE reinicia o AUTOINCREMENT *****/
 -- TRUNCATE socios
 
+/*
+SELECT * FROM socios
+INNER JOIN donativos ON socios.id_socio = donativos.id_socio
+*/
+
+/*
+SELECT * FROM socios
+INNER JOIN donativos ON socios.id_socio = donativos.id_socio
+ORDER BY donativos.data_hora DESC 
+*/
+
+/*
+SELECT *
+FROM socios
+LEFT JOIN donativos ON socios.id_socio = donativos.id_socio
+WHERE socios.id_socio <= 10
+ORDER BY socios.id_socio ASC
+*/
+
+-- DELETE FROM socios WHERE id_socio = 20
+
+-- SELECT * FROM socios
+
+/*
+SELECT socios.id_socio, socios.nome, donativos.*
+FROM socios
+RIGHT JOIN donativos ON donativos.id_socio = socios.id_socio
+WHERE socios.id_socio = 20
+ORDER BY socios.id_socio ASC 
+*/
+
+
+SELECT socios.id_socio, socios.nome, donativos.*
+FROM donativos
+RIGHT JOIN socios ON donativos.id_socio = socios.id_socio
+WHERE socios.id_socio = 20
+ORDER BY socios.id_socio ASC 
 
 
 
