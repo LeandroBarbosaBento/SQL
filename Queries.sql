@@ -197,15 +197,22 @@ HAVING total >= 2300
 ORDER BY total DESC 
 */
 
+/***** DELETE não reinicia o AUTOINCREMENT *****/
+-- DELETE FROM socios
 
+-- DELETE FROM socios WHERE id_socio = 10
 
+-- DELETE FROM socios WHERE nome LIKE 'a%'
 
+-- SELECT * FROM socios WHERE nome LIKE 'a%'
+	-- não retorna nada pois foram deletados na linha anterior
+	
+-- SELECT * FROM socios WHERE cidade = 'Lisboa'
 
+-- DELETE FROM socios WHERE cidade = 'Lisboa'
 
-
-
-
-
+/***** TRUNCATE reinicia o AUTOINCREMENT *****/
+-- TRUNCATE socios
 
 
 
