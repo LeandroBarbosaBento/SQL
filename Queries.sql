@@ -142,7 +142,76 @@
 
 -- SELECT SUM(quantia) AS total FROM donativos WHERE data_hora >= '2017-01-01'
 
---
+-- SELECT COUNT(id_socio), cidade FROM socios GROUP BY cidade
+
+-- SELECT COUNT(id_socio), cidade FROM socios GROUP BY cidade ORDER BY cidade ASC 
+
+-- SELECT id_socio, COUNT(id_donativo) AS numero_de_donativos FROM donativos GROUP BY id_socio
+
+/*
+SELECT socios.id_socio, COUNT(id_donativo)
+AS numero_de_donativos
+FROM donativos, socios
+WHERE socios.id_socio = donativos.id_socio
+GROUP BY socios.id_socio 
+*/
+
+/*
+SELECT socios.id_socio, SUM(quantia)
+AS total_doado
+FROM donativos, socios
+WHERE socios.id_socio = donativos.id_socio
+GROUP BY socios.id_socio
+*/
+
+/*
+SELECT socios.id_socio, SUM(quantia)
+AS total_doado
+FROM donativos, socios
+WHERE socios.id_socio = donativos.id_socio
+GROUP BY socios.id_socio
+HAVING total_doado >= 3000
+*/
+
+/*
+SELECT id_socio, COUNT(id_donativo)
+AS donativos FROM donativos
+GROUP BY id_socio
+HAVING id_socio <= 10
+*/
+
+/*
+SELECT s.nome, SUM(d.quantia) AS total 
+FROM donativos d, socios s
+WHERE s.id_socio = d.id_socio
+GROUP BY s.id_socio
+HAVING s.nome LIKE 'a%'
+*/
+
+/*
+SELECT s.nome, SUM(d.quantia) AS total 
+FROM donativos d, socios s
+WHERE s.id_socio = d.id_socio
+GROUP BY s.id_socio
+HAVING total >= 2300
+ORDER BY total DESC 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
