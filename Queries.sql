@@ -314,6 +314,33 @@ FROM socios
 
 
 
+/***** UPDATE *****/
+
+-- SELECT * FROM socios WHERE id_socio = 10
+
+-- UPDATE socios SET nome = 'ALTERADO' WHERE id_socio = 1
+
+-- UPDATE socios SET nome = 'ALTERADO' WHERE id_socio = 1
+
+/*
+UPDATE socios 
+SET nome = 'ALTERADO 02', cidade = 'NOVA' 
+WHERE id_socio = 10
+*/
+
+/***** INSERT *****/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
