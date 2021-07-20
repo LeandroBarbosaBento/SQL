@@ -245,26 +245,71 @@ WHERE socios.id_socio = 20
 ORDER BY socios.id_socio ASC 
 */
 
-
+/*
 SELECT socios.id_socio, socios.nome, donativos.*
 FROM donativos
 RIGHT JOIN socios ON donativos.id_socio = socios.id_socio
 WHERE socios.id_socio = 20
 ORDER BY socios.id_socio ASC 
+*/
+
+-- DELETE FROM donativos WHERE id_socio = 10
+
+/***** UNION *****/
+
+/*
+SELECT * FROM socios
+WHERE id_socio < 10 UNION
+SELECT *
+FROM socios
+WHERE id_socio >= 200
+*/
+
+/*
+SELECT id_socio, SUM(quantia) AS valor
+FROM donativos
+WHERE id_socio = 1
+
+UNION
+
+SELECT id_socio, COUNT(id_donativo) AS valor
+FROM donativos
+WHERE id_socio = 1
+*/
 
 
+/*
 
+-- RESULTADO DESORGANIZADO
 
+SELECT id_socio, SUM(quantia) AS total
+FROM donativos
+WHERE id_socio = 1
 
+UNION
 
+SELECT COUNT(id_donativo) AS valor, id_socio
+FROM donativos
+WHERE id_socio = 1
+*/
 
+/*
 
+-- O UNION REMOVE OS VALORES DUPLICADOS
 
+SELECT nome
+FROM socios UNION
+SELECT nome
+FROM socios
+*/
 
-
-
-
-
+/*
+-- UNION ALL NÃO REMOVE OS REGISTROS DUPLICADOS
+SELECT nome
+FROM socios UNION ALL 
+SELECT nome
+FROM socios
+*/
 
 
 
