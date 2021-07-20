@@ -330,6 +330,24 @@ WHERE id_socio = 10
 
 /***** INSERT *****/
 
+/*
+INSERT INTO donativos(id_socio, quantia, data_hora)
+VALUES(400,20, NOW())
+*/
+
+
+/*
+INSERT INTO donativos(id_socio, quantia, data_hora) VALUES (450, 20, NOW());
+INSERT INTO donativos(id_socio, quantia, data_hora) VALUES (451, 40, NOW());
+INSERT INTO donativos(id_socio, quantia, data_hora) VALUES (452, 60, NOW())
+*/
+
+-- SELECT * FROM donativos
+
+INSERT INTO donativos VALUES(100000, 500, 50, NOW())
+
+
+
 
 
 
