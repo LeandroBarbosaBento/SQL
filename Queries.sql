@@ -344,7 +344,93 @@ INSERT INTO donativos(id_socio, quantia, data_hora) VALUES (452, 60, NOW())
 
 -- SELECT * FROM donativos
 
-INSERT INTO donativos VALUES(100000, 500, 50, NOW())
+-- INSERT INTO donativos VALUES(100000, 500, 50, NOW())
+
+/*
+SELECT nome
+FROM socios
+WHERE CHAR_LENGTH(nome) >= 25
+*/
+
+/*
+SELECT nome, CHAR_LENGTH(nome) AS tamanho
+FROM socios
+WHERE CHAR_LENGTH(nome) >= 25
+*/
+
+/*
+SELECT nome, CONCAT(morada, ' - ', cidade) AS morada_completa
+FROM socios
+*/
+
+/*
+SELECT CONCAT('Nome: ',nome) AS nome
+FROM socios
+*/
+
+/*
+SELECT CONCAT_WS(' > ', nome, morada, cidade) AS valor
+FROM socios
+*/
+
+
+-- SELECT FORMAT(quantia, 1) FROM donativos
+
+-- SELECT FORMAT(250.495, 2) AS total
+
+/*
+SELECT
+INSERT(nome, 10,3,'(...)') AS nome
+FROM socios
+*/
+
+/*
+SELECT
+INSERT(nome, 20,100,'(...)') AS nome
+FROM socios
+*/
+
+/*
+SELECT
+INSERT(nome, 10, 50,'...') AS nome, 
+LENGTH(INSERT(nome,10,50,'...'))
+FROM socios
+*/
+
+-- SELECT UCASE(nome) AS nome FROM socios
+
+-- SELECT UPPER(nome) AS nome FROM socios
+
+-- SELECT LCASE(nome) AS nome FROM socios
+
+
+
+-- SELECT LEFT(nome, 5) AS nome FROM socios
+
+-- SELECT RIGHT(nome, 5) AS nome FROM socios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
